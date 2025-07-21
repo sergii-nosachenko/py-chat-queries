@@ -16,7 +16,7 @@ def get_users_who_sent_messages_in_2015() -> list[str]:
 
 
 def get_actual_chats() -> list[Chat]:
-    return list(Chat.objects.filter(message__sent__year__gt=2020).
+    return list(Chat.objects.filter(message__sent__year__gt=2020),
                 distinct())
 
 
